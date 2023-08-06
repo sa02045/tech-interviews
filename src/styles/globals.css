@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply h-screen bg-background text-white dark;
+  @apply h-screen;
 }

@@ -19,3 +19,19 @@ model Post {
     likes        Int       @default(0)
     @@index([authorId])
 }
+model Like {
+    id           String    @id @default(cuid())
+    createAt     DateTime  @default(now())
+    postId       String
+    userId       String
+    @@index([postId])
+    @@index([userId])
+}
+model Star {
+    id           String    @id @default(cuid())
+    createAt     DateTime  @default(now())
+    postId       String
+    userId       String
+    @@index([postId])
+    @@index([userId])
+}
